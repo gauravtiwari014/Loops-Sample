@@ -1,0 +1,82 @@
+import java.util.Scanner;
+
+public class LoopsSample {
+
+	Scanner scan1 = new Scanner(System.in);
+	//While Sample
+	public void whilerSample()
+	{
+		String reply = "yes";
+		int num;
+		int square;
+		while(reply.equals("yes") || reply.equals("YES"))
+		{
+			System.out.println("Enter A Number ");
+			num = scan1.nextInt();
+			square = num * num;
+			System.out.println("The square of your Number is "+square);
+			System.out.println("Do You Wish to Continue yes/no");
+			reply = scan1.next();
+		}
+		System.out.println("You ARe out of loop");
+		
+	}
+	//Do While Sample
+	public void doWhilerSample()
+	{
+		//String reply = "yes";
+		String reply="yes";
+		int num;
+		int square;
+		do 
+		{
+			System.out.println("Enter A Number ");
+			num = scan1.nextInt();
+			if(num >= 100)
+			{
+				System.out.println("Sorry Num to be 0-100");
+				//break;
+				continue;
+			}
+			square = num * num;
+			System.out.println("The square of your Number is "+square);
+			System.out.println("Do You Wish to Continue yes/no");
+			reply = scan1.next();
+		}while(reply.equals("yes") || reply.equals("YES"));
+		System.out.println("You ARe out of loop");
+	}
+	
+	// Break .. Continue Sample
+	public void whilerBreakSample()
+	{
+		String reply = "yes";
+		int num;
+		int square;
+		while(reply.equals("yes") || reply.equals("YES"))
+		{
+			System.out.println("Enter A Number ");
+			num = scan1.nextInt();
+			if(num >= 100)
+			{
+				System.out.println("Sorry Number Range is 1-100");
+				break;
+			}
+			square = num * num;
+			System.out.println("The square of your Number is "+square);
+			System.out.println("Do You Wish to Continue yes/no");
+			reply = scan1.next();
+		}
+		System.out.println("You ARe out of loop");
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LoopsSample lsamp = new LoopsSample();
+		//lsamp.whilerSample();
+		lsamp.doWhilerSample();
+
+	}
+
+}
+
+
